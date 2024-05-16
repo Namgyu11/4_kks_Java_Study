@@ -1,2 +1,1 @@
-<p align="center"> <img src="![bandicam 2024-05-17 03-46-28-582](https://github.com/Namgyu11/4_kks_Java_Study/assets/103015031/784616e7-908f-4055-b711-95253bd0a739)
-"> </p>
+<p align="center"> <img src="https://github.com/Namgyu11/4_kks_Java_Study/assets/103015031/db2e9349-abb8-415d-8889-a1cc6572e421"></p>
