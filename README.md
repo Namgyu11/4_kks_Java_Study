@@ -12,20 +12,18 @@
 4. **확장성 및 유지보수성**: 추후 메뉴를 추가하거나 기능을 확장할 때 용이하도록 코드를 구조화.
 
 ## 프로그램 구조
+<p align="center"> <img src=""></p>
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/38552da6-340d-42c1-a9a1-b181ff331f03/f7fbe37d-2ded-4938-ac04-c954ee833fe4/Untitled.png)
 
 ### 프로그램 설계도
 
-![프로젝트 생성 전에 작성](https://prod-files-secure.s3.us-west-2.amazonaws.com/38552da6-340d-42c1-a9a1-b181ff331f03/09c7eafb-8754-4962-a517-ac86eb47b0d6/Untitled.png)
+<p align="center"> <img src=""></p>
 
-프로젝트 생성 전에 작성
 
-![Main, Order 클래스는 인텔리제이 다이어그램 기능으로 대체 ](https://prod-files-secure.s3.us-west-2.amazonaws.com/38552da6-340d-42c1-a9a1-b181ff331f03/a34725d4-ccde-47ab-aa42-4f3b6e00eafa/Untitled.png)
 
-Main, Order 클래스는 인텔리제이 다이어그램 기능으로 대체 
 
 ## 주요 클래스 및 메서드 설명
+<p align="center"> <img src=""></p>
 
 ### **Main 클래스**
 
