@@ -12,18 +12,18 @@
 4. **확장성 및 유지보수성**: 추후 메뉴를 추가하거나 기능을 확장할 때 용이하도록 코드를 구조화.
 
 ## 프로그램 구조
-<p align="center"> <img src=""></p>
+<p align="center"> <img src="https://github.com/Namgyu11/4_kks_Java_Study/assets/103015031/bc9ff4e1-57c2-4cb1-8076-7b2ff9e1813b"></p>
 
 
 ### 프로그램 설계도
 
-<p align="center"> <img src=""></p>
+<p align="center"> <img src="https://github.com/Namgyu11/4_kks_Java_Study/assets/103015031/06a7eff6-2163-42bc-ac15-7865dec34ded"></p>
 
+<p align="center"> <img src="https://github.com/Namgyu11/4_kks_Java_Study/assets/103015031/caae0fe2-1199-40af-8d89-38102eb700ce"></p>
 
 
 
 ## 주요 클래스 및 메서드 설명
-<p align="center"> <img src=""></p>
 
 ### **Main 클래스**
 
