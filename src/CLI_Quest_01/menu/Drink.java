@@ -1,21 +1,14 @@
-package CLI_Quest_01;
+package CLI_Quest_01.menu;
 
 public class Drink extends Menu {
-      private final String size;
 
-      public Drink(String name, int price, String size) {
+      public Drink(String name, int price) {
             super(name, price);
-            this.size = size;
       }
 
       @Override
       public void display() {
-
+            System.out.println("음료: " + getName() + " / 가격: +" + getPrice() + "원");
       }
-
-      public String getSize() {
-            return size;
-      }
-
 
 }

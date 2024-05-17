@@ -1,4 +1,4 @@
-package CLI_Quest_01;
+package CLI_Quest_01.menu;
 
 public abstract class Menu {
 
@@ -14,7 +14,7 @@ public abstract class Menu {
             return this.name;
       }
 
-      public double getPrice() {
+      public int getPrice() {
             return this.price;
       }
 
