@@ -144,7 +144,7 @@ public class Main {
                         order.addMenu(new SpecialBurger(name, price, specialIngredient));
                   }
             } else {
-                  System.out.println("잘못된 입력입니다.");
+                  System.out.println("잘못된 입력입니다#.");
             }
             return true;
       }
