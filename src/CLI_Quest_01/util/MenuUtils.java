@@ -7,7 +7,18 @@ import java.util.Scanner;
 
 public class MenuUtils {
 
-      public static final String[][] BURGERS = {
+      private static MenuUtils instance = null;
+
+      private MenuUtils() {}
+
+      public static MenuUtils getInstance() {
+            if (instance == null) {
+                  instance = new MenuUtils();
+            }
+            return instance;
+      }
+
+      public final String[][] BURGERS = {
               {"빅맥", "5000"},
               {"치킨 버거", "4500"},
               {"새우 버거", "4000"},
@@ -19,7 +30,7 @@ public class MenuUtils {
               {"더블 햄버거", "6000"}
       };
 
-      public static final String[][] SPECIAL_BURGERS = {
+      public final String[][] SPECIAL_BURGERS = {
               {"슈퍼 메가 베이컨 버거", "9800", "메가 베이컨"},
               {"빅 징거 와퍼 버거", "10000", "매우 큰 닭다리 치킨 패티"},
               {"장어탕", "200000", "기력 회복 만땅 장어"},
@@ -28,7 +39,7 @@ public class MenuUtils {
               {"머쉬룸 치킨 쉬림프 피자 마라탕후루 버거", "100000", "블랙 사파이어(가지 포도), 포두부"}
       };
 
-      public static final String[][] SIDES = {
+      public final String[][] SIDES = {
               {"감자 튀김 S 사이즈", "0"},
               {"감자 튀김 L 사이즈", "500"},
               {"치즈스틱", "2000"},
@@ -40,7 +51,7 @@ public class MenuUtils {
               {"콘샐러드 XL 사이즈", "3000"}
       };
 
-      public static final String[][] DRINKS = {
+      public final String[][] DRINKS = {
               {"콜라", "0"},
               {"사이다", "0"},
               {"제로 콜라", "500"},
@@ -50,7 +61,7 @@ public class MenuUtils {
               {"오렌지 주스", "1000"}
       };
 
-      public static boolean addMainMenu(Order order, MenuType menuType, Scanner scanner) {
+      public boolean addMainMenu(Order order, MenuType menuType, Scanner scanner) {
             String[][] menuList;
             switch (menuType) {
                   case BURGER:
@@ -109,7 +120,7 @@ public class MenuUtils {
             return true;
       }
 
-      public static void addSideMenu(Order order, Scanner scanner) {
+      public void addSideMenu(Order order, Scanner scanner) {
             System.out.println("=======================================================\n");
             System.out.println("세트 사이드 메뉴 종류 : \n");
             for (int i = 0; i < SIDES.length; i++) {
@@ -135,7 +146,7 @@ public class MenuUtils {
             }
       }
 
-      public static void addDrinkMenu(Order order, Scanner scanner) {
+      public void addDrinkMenu(Order order, Scanner scanner) {
             System.out.println("=======================================================\n");
             System.out.println("음료 메뉴 종류 : \n");
             for (int i = 0; i < DRINKS.length; i++) {
@@ -160,7 +171,7 @@ public class MenuUtils {
             }
       }
 
-      public static int selectQuantity(Scanner scanner) {
+      public int selectQuantity(Scanner scanner) {
             int count;
             while (true) {
                   System.out.println("=======================================================\n");
@@ -177,7 +188,7 @@ public class MenuUtils {
             return count;
       }
 
-      public static void calculation(int totalPrice, Scanner scanner) {
+      public void calculation(int totalPrice, Scanner scanner) {
             System.out.println("=======================================================\n");
             System.out.println("** 결제를 도와드리겠습니다.");
             System.out.println("- 결제하실 금액을 투입해주세요.");
