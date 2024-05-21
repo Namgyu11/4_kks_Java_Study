@@ -92,4 +92,5 @@
 4. **주문 내역 및 결제**
     - 사용자가 메뉴 선택을 완료하면 주문 내역을 출력하고, 수량을 입력 받는다.
     - 총 금액을 계산하고, 사용자가 입력한 금액과 비교하여 거스름돈을 계산한다.
-<p align="center"> <img src="https://github.com/Namgyu11/4_kks_Java_Study/assets/103015031/db2e9349-abb8-415d-8889-a1cc6572e421"></p>
+<p align="center"> <img src="https://github.com/Namgyu11/4_kks_Java_Study/assets/103015031/be171e53-a602-4115-bd9d-46f123280070
+"></p>
