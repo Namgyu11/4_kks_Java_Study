@@ -1,13 +1,16 @@
-package CLI_Quest_01;
+package CLI_Quest_01.order;
 
 import CLI_Quest_01.menu.Menu;
 import java.util.ArrayList;
 
-public class Order {
+/**
+ * 주문 내역을 관리
+ */
+public class OrderList {
       private final ArrayList<Menu> orderList;
 
 
-      public Order(){
+      public OrderList(){
             orderList = new ArrayList<Menu>();
       }
 
