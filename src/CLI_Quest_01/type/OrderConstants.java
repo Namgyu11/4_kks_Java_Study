@@ -1,4 +1,4 @@
-package CLI_Quest_01.util;
+package CLI_Quest_01.type;
 
 public enum OrderConstants {
       MAX_PERSONS(5, "최대 주문 인원수"),

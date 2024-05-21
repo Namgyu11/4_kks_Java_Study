@@ -1,4 +1,4 @@
-package CLI_Quest_01.menu;
+package CLI_Quest_01.type;
 
 public enum MenuType {
       BURGER,
