@@ -1,6 +1,6 @@
 package CLI_Quest_01.util;
 
-import CLI_Quest_01.Order;
+import CLI_Quest_01.order.OrderList;
 import CLI_Quest_01.menu.*;
 
 import java.util.Scanner;
@@ -61,18 +61,12 @@ public class MenuUtils {
               {"오렌지 주스", "1000"}
       };
 
-      public boolean addMainMenu(Order order, MenuType menuType, Scanner scanner) {
-            String[][] menuList;
-            switch (menuType) {
-                  case BURGER:
-                        menuList = BURGERS;
-                        break;
-                  case SPECIAL_BURGER:
-                        menuList = SPECIAL_BURGERS;
-                        break;
-                  default:
-                        throw new IllegalArgumentException("잘못된 메뉴 타입입니다.");
-            }
+      public boolean addMainMenu(OrderList orderList, MenuType menuType, Scanner scanner) {
+            String[][] menuList = switch (menuType) {
+                  case BURGER -> BURGERS;
+                  case SPECIAL_BURGER -> SPECIAL_BURGERS;
+                  default -> throw new IllegalArgumentException("잘못된 메뉴 타입입니다.");
+            };
 
             System.out.println("=======================================================\n");
             System.out.println(menuType + " 종류 : \n");
@@ -105,14 +99,14 @@ public class MenuUtils {
                   }
                   if (setChoice.equals("y")) {
                         System.out.println("세트로 주문하셨습니다.\n");
-                        addSideMenu(order, scanner);
+                        addSideMenu(orderList, scanner);
                   } else {
                         System.out.println("세트로 주문하지 않으셨습니다.\n");
                   }
                   if (menuType == MenuType.BURGER) {
-                        order.addMenu(new Burger(name, price));
+                        orderList.addMenu(new Burger(name, price));
                   } else {
-                        order.addMenu(new SpecialBurger(name, price, specialIngredient));
+                        orderList.addMenu(new SpecialBurger(name, price, specialIngredient));
                   }
             } else {
                   System.out.println("잘못된 입력입니다#.");
@@ -120,7 +114,7 @@ public class MenuUtils {
             return true;
       }
 
-      public void addSideMenu(Order order, Scanner scanner) {
+      public void addSideMenu(OrderList orderList, Scanner scanner) {
             System.out.println("=======================================================\n");
             System.out.println("세트 사이드 메뉴 종류 : \n");
             for (int i = 0; i < SIDES.length; i++) {
@@ -137,8 +131,8 @@ public class MenuUtils {
                         System.out.println(SIDES[menuChoice - 1][0] + "를 주문하셨습니다.\n");
                         String name = SIDES[menuChoice - 1][0];
                         int price = Integer.parseInt(SIDES[menuChoice - 1][1]);
-                        addDrinkMenu(order, scanner);
-                        order.addMenu(new Side(name, price));
+                        addDrinkMenu(orderList, scanner);
+                        orderList.addMenu(new Side(name, price));
                         break;
                   } else {
                         System.out.println("잘못된 입력입니다.");
@@ -146,7 +140,7 @@ public class MenuUtils {
             }
       }
 
-      public void addDrinkMenu(Order order, Scanner scanner) {
+      public void addDrinkMenu(OrderList orderList, Scanner scanner) {
             System.out.println("=======================================================\n");
             System.out.println("음료 메뉴 종류 : \n");
             for (int i = 0; i < DRINKS.length; i++) {
@@ -163,7 +157,7 @@ public class MenuUtils {
                         System.out.println(DRINKS[menuChoice - 1][0] + "를 주문하셨습니다.");
                         String name = DRINKS[menuChoice - 1][0];
                         int price = Integer.parseInt(DRINKS[menuChoice - 1][1]);
-                        order.addMenu(new Drink(name, price));
+                        orderList.addMenu(new Drink(name, price));
                         break;
                   } else {
                         System.out.println("잘못된 입력입니다.");
