@@ -61,7 +61,7 @@ public class MenuUtils {
               {"오렌지 주스", "1000"}
       };
 
-      public boolean addMainMenu(OrderList orderList, MenuType menuType, Scanner scanner) {
+      public void addMainMenu(OrderList orderList, MenuType menuType, Scanner scanner) {
             String[][] menuList = switch (menuType) {
                   case BURGER -> BURGERS;
                   case SPECIAL_BURGER -> SPECIAL_BURGERS;
@@ -78,7 +78,7 @@ public class MenuUtils {
             int menuChoice = scanner.nextInt();
             scanner.nextLine(); // 입력 버퍼 비우기
             if (menuChoice == 0) {
-                  return false;
+                  return;
             }
             if (menuChoice > 0 && menuChoice <= menuList.length) {
                   System.out.println(menuList[menuChoice - 1][0] + "를 주문하셨습니다.\n");
@@ -111,7 +111,6 @@ public class MenuUtils {
             } else {
                   System.out.println("잘못된 입력입니다#.");
             }
-            return true;
       }
 
       public void addSideMenu(OrderList orderList, Scanner scanner) {
